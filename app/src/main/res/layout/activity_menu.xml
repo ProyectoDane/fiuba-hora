@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/textIcons"
+    android:orientation="vertical"
+    android:weightSum="1"
+    tools:context=".MenuActivity">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/menu_dane"
+        android:scaleType="centerCrop"
+        android:layout_gravity="top"
+        android:layout_weight="0.55"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:text="@string/app_group_name"
+        android:textSize="40sp"
+        android:layout_weight="0.15"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/app_name"
+        android:textSize="30sp"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_weight="0.1"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/aprender_button"
+        android:text="@string/aprender_btn"
+        android:textSize="20sp"
+        android:textColor="@color/textIcons"
+        android:layout_weight="0.1"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="150dp"
+        android:layout_marginLeft="150dp"
+        android:background="@color/colorAccent" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/practicar_button"
+        android:text="@string/practicar_btn"
+        android:textSize="20sp"
+        android:textColor="@color/textIcons"
+        android:layout_weight="0.1"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="150dp"
+        android:layout_marginLeft="150dp"
+        android:background="@color/colorPrimary"/>
+
+</LinearLayout>

@@ -1,0 +1,52 @@
+language: android
+jdk: oraclejdk8
+sudo: false
+env:
+  global:
+  - ANDROID_API=26
+  - EMULATOR_API=24
+  - ANDROID_BUILD_TOOLS=26.1.0
+before_cache:
+- rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
+- rm -fr $HOME/.gradle/caches/*/plugin-resolution/
+cache:
+  directories:
+  - "$HOME/.gradle/caches/"
+  - "$HOME/.gradle/wrapper/"
+  - "$HOME/.android/build-cache"
+android:
+  components:
+  - platform-tools
+  - tools
+  - build-tools-$ANDROID_BUILD_TOOLS
+  - android-$EMULATOR_API
+  - android-$ANDROID_API
+  - sys-img-armeabi-v7a-android-$EMULATOR_API
+  - sys-img-armeabi-v7a-android-$ANDROID_API
+  - extra-android-m2repository
+  - extra-google-google_play_services
+  - addon-google_apis-google-$ANDROID_API
+  licenses:
+  - android-sdk-preview-license-.+
+  - android-sdk-license-.+
+  - google-gdk-license-.+
+before_install:
+- yes | sdkmanager --update
+- yes | sdkmanager --licenses
+before_script:
+- chmod +x gradlew
+script:
+- "./gradlew build"
+- "./gradlew assembleRelease"
+deploy:
+  provider: releases
+  skip_cleanup: true
+  overwrite: true
+  api_key:
+    secure: o3hnS7dmMUY4GXK416scgSnHE1wBgj+u37inxbZl+hRad2dRqkshqKM0pltwisecz2z+gORdUXsU7MGt1/hqlf0qdEFlx/NUmeKxxjb5R9hyExlpC4r9FFJcVnA138QJJS8QkPxGjEzeFxss82ZOP65zot92RNcu+o/ggQIoiqwahI/C9Ki8PxbNEEgIo4piP9cZT39mDKMSFmZxqhyIEnpVL0S9n/anWg+vJ0ApZrc6sdeUNkXFTM/MTG8zmTO80qjytW5kvTo6YBGVuOur/O8xCbw2t6JjzQVcD01k+1qddlffJAmDIbyvMqjQ+TsHbfhxAkEgoaN3KgUYDOlRVU0mSvaL+/0+aLxGwyvJp/SRFIXjinknqL1v8xR3Mr4yu3giYeIg4S+DBmlQ4LSFxMSMEc+X6xJi7Xjt7HTz0+3fUiM7f+noOqj6xX0QNnVx4+c2WvqQW0OVoiKsoZBXDcbBONu1NyEpC9BuLqcMOqBcD+dLsLEWYMgczCdr9omnxtBuNToYfgEbo2BM3K1yTvyC9XPgRnUoK1gKFhT0DP9ZA12FQrwO999DDqwyp0jokEd+KQ84AxjKfpVjwkwwfalRIzarsofXpxILrZbUI3cHHxbvZcUGRgHIbuYhsOuBZgSWb01hUSZaqJCfUMYfGl5WM4ZDSiwYOhwRklh2vJM=
+  file_glob: true
+  file: app/build/outputs/apk/release/*
+  on:
+    repo: ProyectoDane/fiuba-hora
+    branch: develop
+    tags: true

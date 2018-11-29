@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".IntroHoraActivity"
+    android:background="@color/blue1"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <TextView
+        android:id="@+id/intro_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:padding="15dp"
+        android:text="@string/intro_hora_title"
+        android:textAllCaps="true"
+        android:textAlignment="gravity"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:layout_weight="0.1"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/introLayout"
+        android:textAlignment="center"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="40dp"
+        android:layout_weight="0.7">
+
+
+        <ImageView
+            android:layout_width="320dp"
+            android:layout_height="320dp"
+            android:scaleType="fitXY"
+            android:id="@+id/intro_image"
+            android:src="@mipmap/clock_intro"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:id="@+id/intro_txt"
+            android:layout_gravity="bottom"
+            android:gravity="center|start"
+            android:text="@string/intro_hora_txt"
+            android:textAllCaps="true"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="30sp"
+            android:paddingTop="10dp"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp" />
+
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tutorial"
+        android:text="@string/tutorial"
+        android:textAllCaps="true"
+        android:textSize="20sp"
+        android:layout_gravity="bottom|center"
+        android:background="@color/colorAccent"
+        android:textColor="@color/textIcons"
+        android:layout_marginLeft="150dp"
+        android:layout_marginRight="150dp"
+        android:layout_weight="0.1"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/siguiente1"
+        android:text="@string/next"
+        android:textAllCaps="true"
+        android:textSize="20sp"
+        android:layout_gravity="bottom|center"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@color/textIcons"
+        android:layout_marginLeft="150dp"
+        android:layout_marginRight="150dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_weight="0.1"
+        />
+
+</LinearLayout>

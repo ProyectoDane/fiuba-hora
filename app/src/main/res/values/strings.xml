@@ -1,0 +1,102 @@
+<resources>
+    <string name="app_name">Aprendiendo la hora</string>
+
+    <string name="app_group_name">Pequeños Aprendizajes</string>
+    <string name="aprender_btn">Aprender</string>
+    <string name="practicar_btn">Practicar</string>
+
+
+    <string name="intro_hora_title">La hora</string>
+    <string name="intro_hora_txt">Un reloj nos dice qué hora es</string>
+    <string name="intro_hora2_txt">El reloj tiene dos agujas. La más corta nos dice la hora
+        y la más larga indica los minutos.</string>
+    <string name="intro_hora3_txt">Cuando la aguja larga apunta al 12 se dice que es la hora en
+        punto.</string>
+    <string name="intro_hora4_txt">Cuando la aguja corta apunta al número 1, y la larga al 12,
+        quiere decir que es la una en punto.</string>
+    <string name="intro_hora5_txt">Cuando la aguja corta apunta al número 2, y la larga al 12,
+        quiere decir que son las dos en punto.</string>
+    <string name="intro_hora6_txt">Cuando la aguja corta apunta al número 3, y la larga al 12,
+        quiere decir que son las tres en punto. \nY así pasa con todas las horas. La aguja corta nos
+        dice qué hora es. Ahora te toca a vos. Mové la aguja hasta que señale la hora a encontrar.
+    </string>
+
+    <string name="intro_medias_title">La media hora</string>
+    <string name="intro_medias1_txt">Necesitamos los minutos para formar la hora. Los números del
+        reloj son como un superheroe con una identidad secreta.</string>
+    <string name="intro_medias2_txt">La identidad secreta del número 12 es el 0 y la del 6 es el 30.
+    </string>
+    <string name="intro_medias3_txt">Cuando la aguja larga señala al 12, quiere decir que es la hora
+        exacta. Se le dice "en punto". Como una pizza completa.</string>
+    <string name="intro_medias4_txt">Cuando la aguja larga señala al 6, quiere decir que pasaron 30
+        minutos, o media hora. Como la mitad de una pizza.</string>
+
+    <string name="intro_cuartos_title">Los cuartos de hora</string>
+    <string name="intro_cuartos1_txt">La identidad secreta del número 3 es el 15 y la del 9 es el 45.
+    </string>
+    <string name="intro_cuartos2_txt">Cuando la aguja larga señala al 3, quiere decir que pasaron 15
+        minutos. Se le dice "y cuarto". Como dos porciones de una pizza.</string>
+    <string name="intro_cuartos3_txt">Cuando la aguja larga señala al 9, quiere decir que pasaron 45
+        minutos. Se le dice "menos cuarto". Como seis porciones de una pizza.</string>
+
+    <string name="intro_mins_title">Los minutos</string>
+    <string name="intro_mins_txt">Necesitamos los minutos para formar la hora. Los números del reloj
+        son como un superheroe con una identidad secreta.</string>
+    <string name="intro_mins2_txt">La identidad secreta del número 1 es el 5, la del 2 es el 10 y la
+        del 3 es el 15. Y es lo mismo con todos los demás.</string>
+    <string name="intro_mins3_txt">Entonces, cuando la aguja larga señala al 1, quiere decir que
+        pasaron 5 minutos.</string>
+    <string name="intro_mins4_txt">Cuando la aguja larga señala al 2, quiere decir que pasaron 10
+        minutos.</string>
+    <string name="intro_mins5_txt">Cuando la aguja larga señala al 4, quiere decir que pasaron 20
+        minutos.</string>
+    <string name="intro_mins6_txt">Para acordarte de las identidades secretas de los números solo
+        tenés que contar de 5 en 5. Así: 5, 10, 15, 20, 25... Hay que contar hasta 60 porque una
+        hora tiene 60 minutos. Cuando la aguja de los minutos da la vuelta completa, significa que
+        pasó una hora.</string>
+    <string name="intro_mins7_txt">Cuando la aguja larga apunta a un número mayor a 6 se puede decir
+        cuantos minutos faltan para la siguiente hora.</string>
+    <string name="intro_mins8_txt">Cuando apunta al 7, se dice la siguiente hora menos veinticinco.
+        En este reloj es la una menos veinticinco.</string>
+    <string name="intro_mins9_txt">Cuando apunta al 8, se dice la siguiente hora menos veinte.
+        En este reloj es la una menos veinte.</string>
+    <string name="intro_mins10_txt">Cuando apunta al 10, se dice la siguiente hora menos diez.
+        En este reloj es la una menos diez.</string>
+    <string name="intro_mins11_txt">Cuando apunta al 11, se dice la siguiente hora menos cinco.
+        En este reloj es la una menos cinco. \nAhora es tu turno. Mové la aguja de los minutos hasta
+        que señale los minutos a encontrar.</string>
+
+    <string name="intro_hr_min_title">Las horas y los minutos</string>
+    <string name="intro_hr_min_txt">Usamos ambas agujas del reloj para representar la hora</string>
+
+    <string name="ident_hora_inic_dig">12:00</string>
+    <string name="ident_hora_inic_txt">DOCE EN PUNTO</string>
+
+    <string name="intro_momentos_title">Los momentos del día</string>
+    <string name="intro_momentos1_txt">Sofía se despierta a las 7 de la mañana.</string>
+    <string name="intro_momentos2_txt">Sofía entra a la escuela a las 8 de la mañana.</string>
+    <string name="intro_momentos3_txt">Sofía almuerza a la 1 de la tarde.</string>
+    <string name="intro_momentos4_txt">Sofía juega al basket a las 4 de la tarde.</string>
+
+    <string name="ident_hora_txt">Hora a encontrar:</string>
+    <string name="ident_hora_title">Encontrar la hora en el reloj</string>
+
+    <string name="ident_mins_txt">Minutos a encontrar:</string>
+    <string name="ident_mins_title">Encontrar los minutos en el reloj</string>
+
+    <string name="ident_hora_mins_inic">DOCE EN PUNTO</string>
+    <string name="ident_hora_mins_txt">Hora y Minutos a encontrar:</string>
+    <string name="ident_hora_mins_title">Encontrar la hora con los minutos en el reloj</string>
+
+    <string name="next">Siguente</string>
+    <string name="volver">Volver al menú</string>
+    <string name="jugar">Jugar de nuevo</string>
+    <string name="intentalo_de_nuevo">"Intentalo de nuevo"</string>
+    <string name="correcto">"Correcto!"</string>
+
+    <string name="tutorial">Ver tutorial</string>
+
+    <string name="title_activity_splash">SplashActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+</resources>
