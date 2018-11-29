@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="fiuba.hora.MainActivity"
+    android:padding="@dimen/general_margin"
+    android:id="@+id/rootLayout"
+    android:orientation="vertical"
+    android:background="@mipmap/fondo"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/findTimeTitle"
+        android:text="@string/ident_hora_title"
+        android:textAllCaps="true"
+        android:textAlignment="center"
+        android:layout_gravity="center"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        android:textColor="@color/blue8"
+        />
+
+    <LinearLayout
+        android:id="@+id/gameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="40dp"
+        android:orientation="horizontal"
+        android:textAlignment="center">
+
+        <RelativeLayout
+            android:id="@+id/clockFrame"
+            android:layout_width="@dimen/frame_diam"
+            android:layout_height="@dimen/frame_diam"
+            android:layout_gravity="center_horizontal">
+
+            <ImageView
+                android:id="@+id/clock"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:background="@android:color/transparent"
+                android:orientation="vertical"
+                android:src="@mipmap/clock" />
+
+            <ImageView
+                android:id="@+id/hourHand"
+                android:layout_width="40dp"
+                android:layout_height="150dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="126dp"
+                android:background="@android:color/transparent"
+                android:orientation="vertical"
+                android:src="@mipmap/hour"
+                android:transformPivotX="20dp"
+                android:transformPivotY="126dp" />
+
+            <ImageView
+                android:id="@+id/minHand"
+                android:layout_width="@dimen/hand_width"
+                android:layout_height="170dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="100dp"
+                android:background="@android:color/transparent"
+                android:orientation="vertical"
+                android:src="@mipmap/minutes"
+                android:transformPivotX="20dp"
+                android:transformPivotY="150dp" />
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="15dp"
+            android:background="@color/transparentColor"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:background="@drawable/rounded_corner_right_container"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="17dp"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="17dp"
+                        android:layout_height="17dp"
+                        android:layout_alignParentLeft="true"
+                        app:srcCompat="@drawable/ic_filter_tilt_shift_black_24dp" />
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="17dp"
+                        android:layout_height="17dp"
+                        android:layout_alignParentRight="true"
+                        app:srcCompat="@drawable/ic_filter_tilt_shift_black_24dp" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/textAskingTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:contentDescription="@string/ident_hora_txt"
+                    android:textAllCaps="true"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/ident_hora_txt"
+                    android:textAlignment="center"
+                    android:textColor="@color/secondaryText"
+                    android:textSize="26sp"
+                    android:textStyle="bold"
+                    tools:text="Hora a encontrar" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/rounded_corner_ident"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textTimeTxt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ident_hora_inic_txt"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/white"
+                        android:textSize="30sp"
+                        android:textStyle="bold"
+                        tools:text="@string/ident_hora_inic_txt" />
+
+                    <TextView
+                        android:id="@+id/textTimeDigital"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ident_hora_inic_dig"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/white"
+                        android:textSize="25sp"
+                        android:textStyle="bold"
+                        tools:text="@string/ident_hora_inic_dig" />
+
+                </LinearLayout>
+
+                <xyz.hanks.library.bang.SmallBangView
+                    android:id="@+id/like_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_weight="0.9"
+                    android:gravity="center_vertical|center_horizontal"
+                    app:circle_end_color="#ffbc00"
+                    app:circle_start_color="#fa9651"
+                    app:dots_primary_color="#fa9651"
+                    app:dots_secondary_color="#ffbc00">
+
+                    <TextView
+                        android:id="@+id/resultado"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorAccent"
+                        android:textAllCaps="true"
+                        android:textSize="40sp"
+                        android:textStyle="bold"
+                        android:visibility="invisible" />
+
+                </xyz.hanks.library.bang.SmallBangView>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/transparentColor"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <Button
+                    android:id="@+id/jugar"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@color/colorPrimaryDark"
+                    android:text="@string/jugar"
+                    android:textAllCaps="true"
+                    android:textColor="@color/textIcons"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:id="@+id/volver1"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="100dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:text="@string/volver"
+                    android:textAllCaps="true"
+                    android:textAlignment="center"
+                    android:textColor="@color/textIcons" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

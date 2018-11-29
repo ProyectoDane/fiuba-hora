@@ -1,0 +1,55 @@
+package fiuba.hora
+
+import android.content.Intent
+
+/**
+ * Activity de la pantalla introductoria a un ejercicio que involucra
+ * identificar la hora mas los minutos en el reloj.
+ * Contiene la explicación previa necesaria para resolverlo
+ */
+class IntroHoraMinutosActivity : IntroActivity() {
+
+    /**
+     * Obtiene el intent con la activity que se desea como siguiente.
+     */
+    override fun getTheIntent(): Intent {
+        return Intent(this, IdentifHoraMinutosActivity::class.java)
+    }
+
+    /**
+     * Obtiene el intent con la activity del video tutorial.
+     */
+    override fun getTheTutorial(): Intent {
+        return Intent(this, VideoHoraMinutosActivity::class.java)
+    }
+
+    /**
+     * Obtiene el id del recurso string que tiene el texto para el titulo
+     * de la pantalla.
+     */
+    override fun getTitleId(): Int {
+        return R.string.intro_hr_min_title
+    }
+
+    /**
+     * Obtiene el id del recurso string que tiene el texto para el cuerpo
+     * de la pantalla.
+     */
+    override fun getTextId(): Int {
+        return R.string.intro_hr_min_txt
+    }
+
+    /**
+     * Obtiene el id del recurso de audio que corresponda.
+     */
+    override fun getAudioId(): Int {
+        return R.raw.explicacion_hr_min
+    }
+
+    /**
+     * Obtiene el id del recurso de imagen para el cuerpo de la pantalla.
+     */
+    override fun getImageId(): Int {
+        return R.mipmap.clock_minutes1
+    }
+}

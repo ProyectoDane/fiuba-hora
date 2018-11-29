@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--  it is the R of the circle  -->
+    <dimen name="frame_diam">500dp</dimen>
+    <dimen name="hand_length">150dp</dimen>
+    <dimen name="clockframe_margin">100dp</dimen>
+
+    <dimen name="general_margin">15dp</dimen>
+    <dimen name="hand_width">40dp</dimen>
+    <dimen name="clock_radius">20dp</dimen>
+    <dimen name="aux">100dp</dimen>
+
+    <dimen name="half_hand_width">20dp</dimen>
+
+    <!-- hand length minus half o width so: -->
+    <dimen name="hand_margin_left">200dp</dimen>
+
+</resources>
