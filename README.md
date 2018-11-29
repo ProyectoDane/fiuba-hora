@@ -1,4 +1,4 @@
-# fiuba-hora 
+# fiuba-hora [![Build Status](https://travis-ci.org/ProyectoDane/fiuba-hora.svg?branch=develop)](https://travis-ci.org/ProyectoDane/fiuba-hora)
 
 ## General
 Este proyecto esta escrito en Kotlin 1.2.51 utilizando la SDK de Android versión 26.1.0. 
