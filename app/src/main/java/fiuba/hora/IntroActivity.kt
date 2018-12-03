@@ -5,6 +5,8 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_intro.*
 import android.media.MediaPlayer
+import android.view.View
+import fiuba.hora.data.IntroData
 
 /**
  * Clase abstracta que modela como se debe ver y qué comportamiento
@@ -14,6 +16,8 @@ import android.media.MediaPlayer
 abstract class IntroActivity : AppCompatActivity() {
 
     var ap: MediaPlayer = MediaPlayer()
+    var i = 0
+    open val introArray: Array<IntroData> = arrayOf()
 
     /**
      * Setea la vista con el layout.
@@ -21,6 +25,40 @@ abstract class IntroActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_intro)
+    }
+
+    /**
+     * Metodo que setea el contenido que se mostrará y reproducirá en la activity luego
+     * de que termine de reproducirse el audio actual.
+     */
+    fun setAudioPlayerListener(audioPlayer: MediaPlayer) {
+        audioPlayer.setOnCompletionListener {
+            i += 1
+            if (i < introArray.size) {
+                val currIntroData = introArray[i]
+                setLayoutContent(currIntroData.textId, currIntroData.imageId, currIntroData.audioId)
+                setAudioPlayerListener(audioPlayer)
+            } else{
+                finishOnAudioPlayerCompletion(audioPlayer)
+            }
+        }
+    }
+
+    /**
+     * Una vez que se reproduo el ultimo audio, se llama a este metodo, que hace que se
+     * pase a la siguiente activity (la del ejericico de identificar la hora).
+     */
+    fun finishOnAudioPlayerCompletion(audioPlayer: MediaPlayer) {
+        siguiente1.callOnClick()
+    }
+
+    fun setLayoutContent(textId: Int, imageId: Int, audioId: Int) {
+        intro_txt.setText(textId)
+        intro_txt.invalidate()
+        intro_image.setImageResource(imageId)
+        intro_image.invalidate()
+        ap = audioPlayer(audioId)
+        setAudioPlayerListener(ap)
     }
 
     /**
@@ -33,9 +71,9 @@ abstract class IntroActivity : AppCompatActivity() {
     override fun onResume() {
         super.onResume()
         intro_title.setText(getTitleId())
-        intro_txt.setText(getTextId())
-        intro_image.setImageResource(getImageId())
-        ap = audioPlayer()
+        setLayoutContent(getTextId(), getImageId(), getAudioId())
+        siguiente1.visibility = View.INVISIBLE
+        tutorial.visibility = View.INVISIBLE
         siguiente1.setOnClickListener {
             stopAudioPlayer()
             startActivity(getTheIntent())
@@ -58,6 +96,12 @@ abstract class IntroActivity : AppCompatActivity() {
         stopAudioPlayer()
     }
 
+    override fun onBackPressed() {
+        super.onBackPressed()
+        super.onStop()
+        stopAudioPlayer()
+    }
+
     /**
      * Detiene el audio player. Si no se instanció bien desde un principio
      * no tira una excepción al tratar de detenerlo.
@@ -73,9 +117,9 @@ abstract class IntroActivity : AppCompatActivity() {
      * Obtengo un media player que esta pasando el audio de la explicación
      * en la app. En caso de excepción, se devuelve un media player vacio.
      */
-    private fun audioPlayer(): MediaPlayer {
+    private fun audioPlayer(audioId: Int): MediaPlayer {
         try {
-            val mp = MediaPlayer.create(this, getAudioId())
+            val mp = MediaPlayer.create(this, audioId)
             mp.start()
             return mp
         } catch (e: Exception) {
