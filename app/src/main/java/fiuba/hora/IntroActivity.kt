@@ -39,13 +39,13 @@ abstract class IntroActivity : AppCompatActivity() {
         siguiente1.setOnClickListener {
             stopAudioPlayer()
             startActivity(getTheIntent())
-            finish()
+            //finish()
         }
         tutorial.setOnClickListener {
             val intent = getTheTutorial()
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+            //intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
             startActivity(intent)
-            finish()
+            //finish()
         }
     }
 

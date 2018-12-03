@@ -20,9 +20,9 @@ abstract class VideoActivity : AppCompatActivity() {
         mVideoView.setVideoPath("content://fiuba.hora/" + getTheNameVideo())
         mVideoView.setOnCompletionListener { _ ->
             val intent = getTheIntent()
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+            //intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
             startActivity(intent)
-            finish()
+            //finish()
         }
         mVideoView.start()
     }

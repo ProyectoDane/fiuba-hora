@@ -1,6 +1,7 @@
 package fiuba.hora
 
 import android.content.Context
+import android.content.Intent
 import android.graphics.*
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
@@ -239,7 +240,9 @@ abstract class MainActivity : AppCompatActivity() {
      */
     private fun volverButton() {
         volver1.setOnClickListener {
-            finish()
+            val seccionesIntent = Intent(this, SeccionesPracticarActivity::class.java)
+            seccionesIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+            startActivity(seccionesIntent)
         }
     }
 
