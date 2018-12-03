@@ -18,7 +18,7 @@ read GITHUB_USERPASS
 
 # current branch for push
 export CURRENT_BRANCH=$(git branch | grep \* | cut -d ' ' -f2)
-export REPO_ORIGIN="https://$GITHUB_USERNAME:$GITHUB_USERPASS@github.com/$GITHUB_USERNAME/taller-de-pryectos-3.git"
+export REPO_ORIGIN="https://$GITHUB_USERNAME:$GITHUB_USERPASS@github.com/ProyectoDane/fiuba-hora.git"
 
 # message for tag
 echo "Mensaje para git tag $VERSION:" 
