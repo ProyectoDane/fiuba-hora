@@ -39,26 +39,4 @@ class IntroMomentosDia1Activity: IntroActivity() {
     override fun getTitleId(): Int {
         return R.string.intro_momentos_title
     }
-
-    /**
-     * Obtiene el id del recurso string que tiene el texto para el cuerpo
-     * de la pantalla.
-     */
-    override fun getTextId(): Int {
-        return R.string.intro_momentos1_txt
-    }
-
-    /**
-     * Obtiene el id del recurso de audio que corresponda.
-     */
-    override fun getAudioId(): Int {
-        return R.raw.moments1
-    }
-
-    /**
-     * Obtiene el id del recurso de imagen para el cuerpo de la pantalla.
-     */
-    override fun getImageId(): Int {
-        return R.mipmap.clock_wake_up
-    }
 }

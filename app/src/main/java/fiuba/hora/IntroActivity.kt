@@ -39,7 +39,7 @@ abstract class IntroActivity : AppCompatActivity() {
                 setLayoutContent(currIntroData.textId, currIntroData.imageId, currIntroData.audioId)
                 setAudioPlayerListener(audioPlayer)
             } else{
-                finishOnAudioPlayerCompletion(audioPlayer)
+                finishOnAudioPlayerCompletion()
             }
         }
     }
@@ -48,10 +48,16 @@ abstract class IntroActivity : AppCompatActivity() {
      * Una vez que se reproduo el ultimo audio, se llama a este metodo, que hace que se
      * pase a la siguiente activity (la del ejericico de identificar la hora).
      */
-    fun finishOnAudioPlayerCompletion(audioPlayer: MediaPlayer) {
-        siguiente1.callOnClick()
+    fun finishOnAudioPlayerCompletion() {
+        startActivity(getTheIntent())
+        finish()
     }
 
+    /**
+     * Setea el contenido de la activity, el texto y la imagen que se muestran y el
+     * audio que se escucha. Además, setea logica para el audio player para que
+     * cuando termine el audio actual se actualice el contenido de la activity.
+     */
     fun setLayoutContent(textId: Int, imageId: Int, audioId: Int) {
         intro_txt.setText(textId)
         intro_txt.invalidate()
@@ -71,9 +77,25 @@ abstract class IntroActivity : AppCompatActivity() {
     override fun onResume() {
         super.onResume()
         intro_title.setText(getTitleId())
-        setLayoutContent(getTextId(), getImageId(), getAudioId())
+        val firstLayoutContent = introArray.first()
+        setLayoutContent(
+                firstLayoutContent.textId,
+                firstLayoutContent.imageId,
+                firstLayoutContent.audioId
+        )
+        // Se deshabilitan 2 botones que ya no se utilizan
+        // Explicacion en metodo setearLogicaDeBotones
         siguiente1.visibility = View.INVISIBLE
         tutorial.visibility = View.INVISIBLE
+    }
+
+    /**
+     * Esta funcion tiene logica de dos botones que actualmente estan invisibles
+     * porque no se usan. Se quitaron debido a un cambio en la dinamica de la app.
+     * Se deja el codigo de la función (sin llamar), por si se quieren volver a incluir.
+     * De querer volverse a incluir, hacer la llamada desde onResume.
+     */
+    fun setearLogicaDeBotones() {
         siguiente1.setOnClickListener {
             stopAudioPlayer()
             startActivity(getTheIntent())
@@ -143,20 +165,4 @@ abstract class IntroActivity : AppCompatActivity() {
      * de la pantalla.
      */
     abstract fun getTitleId(): Int
-
-    /**
-     * Obtiene el id del recurso string que tiene el texto para el cuerpo
-     * de la pantalla.
-     */
-    abstract fun getTextId(): Int
-
-    /**
-     * Obtiene el id del recurso de audio que corresponda.
-     */
-    abstract fun getAudioId(): Int
-
-    /**
-     * Obtiene el id del recurso de imagen para el cuerpo de la pantalla.
-     */
-    abstract fun getImageId(): Int
 }
