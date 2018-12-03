@@ -1,6 +1,7 @@
 package fiuba.hora
 
 import android.content.Intent
+import fiuba.hora.data.IntroData
 
 /**
  * Activity de la pantalla introductoria a un ejercicio que involucra
@@ -10,11 +11,18 @@ import android.content.Intent
  */
 class IntroMomentosDia1Activity: IntroActivity() {
 
+    override val introArray: Array<IntroData> = arrayOf(
+            IntroData(R.string.intro_momentos1_txt, R.mipmap.clock_wake_up, R.raw.moments1),
+            IntroData(R.string.intro_momentos2_txt, R.mipmap.clock_school, R.raw.moments2),
+            IntroData(R.string.intro_momentos3_txt, R.mipmap.clock_lunch, R.raw.moments3),
+            IntroData(R.string.intro_momentos4_txt, R.mipmap.clock_play, R.raw.moments4)
+    )
+
     /**
      * Obtiene el intent con la activity que se desea como siguiente.
      */
     override fun getTheIntent(): Intent {
-        return Intent(this, IntroMomentosDia2Activity::class.java)
+        return Intent(this, IdentifHoraActivity::class.java)
     }
 
     /**
