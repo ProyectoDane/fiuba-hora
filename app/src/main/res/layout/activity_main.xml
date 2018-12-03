@@ -76,6 +76,12 @@
                 android:transformPivotX="34dp"
                 android:transformPivotY="123dp" />
 
+            <ImageView
+                android:id="@+id/centerClock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                app:srcCompat="@mipmap/ic_center" />
 
 
         </RelativeLayout>
