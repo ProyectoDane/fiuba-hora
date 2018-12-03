@@ -45,11 +45,11 @@
         </activity>
         <activity
             android:name=".IntroHoraActivity"
-            android:parentActivityName=".SeccionesPracticarActivity"
+            android:parentActivityName=".SeccionesActivity"
             android:screenOrientation="landscape">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".SeccionesPracticarActivity" />
+                android:value=".SeccionesActivity" />
         </activity>
         <activity
             android:name=".IntroHora2Activity"
@@ -93,11 +93,11 @@
         </activity>
         <activity
             android:name=".IntroMediasHoras1Activity"
-            android:parentActivityName=".SeccionesPracticarActivity"
+            android:parentActivityName=".SeccionesActivity"
             android:screenOrientation="landscape">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".SeccionesPracticarActivity" />
+                android:value=".SeccionesActivity" />
         </activity>
         <activity
             android:name=".IntroMediasHoras2Activity"
@@ -125,11 +125,11 @@
         </activity>
         <activity
             android:name=".IntroCuartosHora1Activity"
-            android:parentActivityName=".SeccionesPracticarActivity"
+            android:parentActivityName=".SeccionesActivity"
             android:screenOrientation="landscape">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".SeccionesPracticarActivity" />
+                android:value=".SeccionesActivity" />
         </activity>
         <activity
             android:name=".IntroCuartosHora2Activity"
@@ -149,11 +149,11 @@
         </activity>
         <activity
             android:name=".IntroMinutosActivity"
-            android:parentActivityName=".SeccionesPracticarActivity"
+            android:parentActivityName=".SeccionesActivity"
             android:screenOrientation="landscape">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".SeccionesPracticarActivity" />
+                android:value=".SeccionesActivity" />
         </activity>
         <activity
             android:name=".IntroMinutos2Activity"
@@ -237,11 +237,11 @@
         </activity>
         <activity
             android:name=".IntroHoraMinutosActivity"
-            android:parentActivityName=".SeccionesPracticarActivity"
+            android:parentActivityName=".SeccionesActivity"
             android:screenOrientation="landscape">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".SeccionesPracticarActivity" />
+                android:value=".SeccionesActivity" />
         </activity>
         <activity
             android:name=".VideoAprenderActivity"
@@ -254,21 +254,21 @@
         </activity>
         <activity
             android:name=".VideoHoraActivity"
-            android:parentActivityName=".IntroHoraActivity"
+            android:parentActivityName=".IntroHora6Activity"
             android:configChanges="orientation|keyboardHidden|screenSize|smallestScreenSize"
             android:screenOrientation="landscape">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".IntroHoraActivity" />
+                android:value=".IntroHora6Activity" />
         </activity>
         <activity
             android:name=".VideoMinutosActivity"
-            android:parentActivityName=".IntroMinutos3Activity"
+            android:parentActivityName=".IntroMinutos10Activity"
             android:configChanges="orientation|keyboardHidden|screenSize|smallestScreenSize"
             android:screenOrientation="landscape">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".IntroMinutos3Activity" />
+                android:value=".IntroMinutos10Activity" />
         </activity>
         <activity
             android:name=".VideoHoraMinutosActivity"

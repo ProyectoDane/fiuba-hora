@@ -240,9 +240,9 @@ abstract class MainActivity : AppCompatActivity() {
      */
     private fun volverButton() {
         volver1.setOnClickListener {
-            val seccionesIntent = Intent(this, SeccionesPracticarActivity::class.java)
-            seccionesIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-            startActivity(seccionesIntent)
+            val menuIntent = Intent(this, MenuActivity::class.java)
+            startActivity(menuIntent)
+            finish()
         }
     }
 
