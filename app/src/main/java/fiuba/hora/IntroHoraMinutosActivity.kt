@@ -47,26 +47,4 @@ class IntroHoraMinutosActivity : IntroActivity() {
     override fun getTitleId(): Int {
         return R.string.intro_hr_min_title
     }
-
-    /**
-     * Obtiene el id del recurso string que tiene el texto para el cuerpo
-     * de la pantalla.
-     */
-    override fun getTextId(): Int {
-        return R.string.intro_hora2_txt
-    }
-
-    /**
-     * Obtiene el id del recurso de audio que corresponda.
-     */
-    override fun getAudioId(): Int {
-        return R.raw.hours2
-    }
-
-    /**
-     * Obtiene el id del recurso de imagen para el cuerpo de la pantalla.
-     */
-    override fun getImageId(): Int {
-        return R.mipmap.clock_intro1
-    }
 }

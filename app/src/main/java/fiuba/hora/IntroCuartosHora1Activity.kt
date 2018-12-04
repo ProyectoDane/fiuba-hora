@@ -12,6 +12,7 @@ import fiuba.hora.data.IntroData
 class IntroCuartosHora1Activity : IntroActivity() {
 
     override val introArray: Array<IntroData> = arrayOf(
+            IntroData(R.string.intro_mins_txt, R.mipmap.clock_minutes, R.raw.minutes1),
             IntroData(R.string.intro_cuartos1_txt, R.mipmap.clock_minutes, R.raw.quarter1),
             IntroData(R.string.intro_cuartos2_txt, R.mipmap.clock_minutes5, R.raw.quarter2),
             IntroData(R.string.intro_cuartos3_txt, R.mipmap.clock_minutes7, R.raw.quarter3)
@@ -37,28 +38,5 @@ class IntroCuartosHora1Activity : IntroActivity() {
      */
     override fun getTitleId(): Int {
         return R.string.intro_cuartos_title
-    }
-
-    /**
-     * Obtiene el id del recurso string que tiene el texto para el cuerpo
-     * de la pantalla.
-     */
-    override fun getTextId(): Int {
-        return R.string.intro_cuartos1_txt
-    }
-
-    /**
-     * Obtiene el id del recurso de audio que corresponda.
-     */
-    override fun getAudioId(): Int {
-        return R.raw.quarter1
-    }
-
-
-    /**
-     * Obtiene el id del recurso de imagen para el cuerpo de la pantalla.
-     */
-    override fun getImageId(): Int {
-        return R.mipmap.clock_minutes
     }
 }
