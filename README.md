@@ -41,6 +41,9 @@ RELEASE_KEY_PASSWORD=
 ```
 con los valores que se usaron para generar la keystore.
 
+En el archivo `build.gradle` actualizar el valor del campo `versionName` por una versión mas nueva.
+Por ejemplo, si actualmente está `versionName=0.1.0` una posible actualización podria ser a `versionName=0.1.1` o `versionName=0.2.0` (segun el esquema de versionado que se decida tomar).
+
 Luego estando parado en el directorio raiz de la aplicación, ejecutar
 ```./release_new_version.sh```
 
