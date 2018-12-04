@@ -90,26 +90,6 @@ abstract class IntroActivity : AppCompatActivity() {
     }
 
     /**
-     * Esta funcion tiene logica de dos botones que actualmente estan invisibles
-     * porque no se usan. Se quitaron debido a un cambio en la dinamica de la app.
-     * Se deja el codigo de la función (sin llamar), por si se quieren volver a incluir.
-     * De querer volverse a incluir, hacer la llamada desde onResume.
-     */
-    fun setearLogicaDeBotones() {
-        siguiente1.setOnClickListener {
-            stopAudioPlayer()
-            startActivity(getTheIntent())
-            finish()
-        }
-        tutorial.setOnClickListener {
-            val intent = getTheTutorial()
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
-            startActivity(intent)
-            finish()
-        }
-    }
-
-    /**
      * Lógica que se ejecuta cuando activity se detiene.
      * Se debe detener el sonido.
      */
@@ -149,11 +129,6 @@ abstract class IntroActivity : AppCompatActivity() {
             return MediaPlayer()
         }
     }
-
-    /**
-     * Obtiene el intent con la activity del video tutorial.
-     */
-    abstract fun getTheTutorial(): Intent
 
     /**
      * Obtiene el intent con la activity que se desea como siguiente.
