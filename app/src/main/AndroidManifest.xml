@@ -11,7 +11,7 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".SplashActivity"
-            android:noHistory="true"
+            android:noHistory="false"
             android:theme="@style/SplashTheme"
             android:screenOrientation="landscape">
             <intent-filter>
@@ -45,52 +45,51 @@
         </activity>
         <activity
             android:name=".IntroHoraActivity"
-            android:parentActivityName=".MenuActivity"
-            android:screenOrientation="landscape"
-            android:launchMode="singleTop">
+            android:parentActivityName=".SeccionesActivity"
+            android:screenOrientation="landscape">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MenuActivity" />
+                android:value=".SeccionesActivity" />
         </activity>
         <activity
             android:name=".IntroMediasHoras1Activity"
-            android:parentActivityName=".MenuActivity"
+            android:parentActivityName=".SeccionesActivity"
             android:screenOrientation="landscape">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MenuActivity" />
+                android:value=".SeccionesActivity" />
         </activity>
         <activity
             android:name=".IntroCuartosHora1Activity"
-            android:parentActivityName=".MenuActivity"
+            android:parentActivityName=".SeccionesActivity"
             android:screenOrientation="landscape">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MenuActivity" />
+                android:value=".SeccionesActivity" />
         </activity>
         <activity
             android:name=".IntroMinutosActivity"
-            android:parentActivityName=".MenuActivity"
+            android:parentActivityName=".SeccionesActivity"
             android:screenOrientation="landscape">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MenuActivity" />
+                android:value=".SeccionesActivity" />
         </activity>
         <activity
             android:name=".IntroHoraMinutosActivity"
-            android:parentActivityName=".MenuActivity"
+            android:parentActivityName=".SeccionesActivity"
             android:screenOrientation="landscape">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MenuActivity" />
+                android:value=".SeccionesActivity" />
         </activity>
         <activity
             android:name=".IntroMomentosDia1Activity"
-            android:parentActivityName=".MenuActivity"
+            android:parentActivityName=".SeccionesActivity"
             android:screenOrientation="landscape">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MenuActivity" />
+                android:value=".SeccionesActivity" />
         </activity>
         <activity
             android:name=".VideoAprenderActivity"
@@ -130,43 +129,43 @@
         </activity>
         <activity
             android:name=".IdentifHoraActivity"
-            android:parentActivityName=".MenuActivity"
+            android:parentActivityName=".IntroHoraActivity"
             android:screenOrientation="landscape">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MenuActivity" />
+                android:value=".IntroHoraActivity" />
         </activity>
         <activity
             android:name=".IdentifMediasHorasActivity"
-            android:parentActivityName=".MenuActivity"
+            android:parentActivityName=".IntroMediasHoras1Activity"
             android:screenOrientation="landscape">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MenuActivity" />
+                android:value=".IntroMediasHoras1Activity" />
         </activity>
         <activity
             android:name=".IdentifCuartosHoraActivity"
-            android:parentActivityName=".MenuActivity"
+            android:parentActivityName=".IntroCuartosHora1Activity"
             android:screenOrientation="landscape">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MenuActivity" />
+                android:value=".IntroCuartosHora1Activity" />
         </activity>
         <activity
             android:name=".IdentifMinutosActivity"
-            android:parentActivityName=".MenuActivity"
+            android:parentActivityName=".IntroMinutosActivity"
             android:screenOrientation="landscape">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MenuActivity" />
+                android:value=".IntroMinutosActivity" />
         </activity>
         <activity
             android:name=".IdentifHoraMinutosActivity"
-            android:parentActivityName=".MenuActivity"
+            android:parentActivityName=".IntroHoraMinutosActivity"
             android:screenOrientation="landscape">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MenuActivity" />
+                android:value=".IntroHoraMinutosActivity" />
         </activity>
         <provider
             android:name=".VideoProvider"

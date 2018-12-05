@@ -1,6 +1,7 @@
 package fiuba.hora
 
 import android.content.Context
+import android.content.Intent
 import android.graphics.*
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
@@ -239,6 +240,8 @@ abstract class MainActivity : AppCompatActivity() {
      */
     private fun volverButton() {
         volver1.setOnClickListener {
+            val menuIntent = Intent(this, MenuActivity::class.java)
+            startActivity(menuIntent)
             finish()
         }
     }
