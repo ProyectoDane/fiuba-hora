@@ -39,27 +39,4 @@ class IntroMediasHoras1Activity : IntroActivity() {
     override fun getTitleId(): Int {
         return R.string.intro_medias_title
     }
-
-    /**
-     * Obtiene el id del recurso string que tiene el texto para el cuerpo
-     * de la pantalla.
-     */
-    override fun getTextId(): Int {
-        return R.string.intro_medias1_txt
-    }
-
-    /**
-     * Obtiene el id del recurso de audio que corresponda.
-     */
-    override fun getAudioId(): Int {
-        return R.raw.halfs1
-    }
-
-
-    /**
-     * Obtiene el id del recurso de imagen para el cuerpo de la pantalla.
-     */
-    override fun getImageId(): Int {
-        return R.mipmap.clock_intro1
-    }
 }
