@@ -5,10 +5,8 @@ import android.content.Intent
 import android.graphics.*
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import android.transition.Fade
 import android.view.MotionEvent
 import android.view.View
-import android.view.Window
 import android.widget.ImageView
 import android.widget.TextView
 
@@ -41,10 +39,6 @@ abstract class MainActivity : AppCompatActivity() {
      */
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        with(window) {
-            requestFeature(Window.FEATURE_CONTENT_TRANSITIONS)
-            enterTransition = Fade()
-        }
         setContentView(R.layout.activity_main)
     }
 

@@ -1,12 +1,9 @@
 package fiuba.hora
 
-import android.app.ActivityOptions
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
-import android.transition.Fade
-import android.view.Window
 
 /**
  * Pantalla de splash con logo de DANE.
@@ -22,10 +19,6 @@ class SplashActivity : AppCompatActivity() {
      */
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        with(window) {
-            requestFeature(Window.FEATURE_CONTENT_TRANSITIONS)
-            exitTransition = Fade()
-        }
         setContentView(R.layout.activity_splash)
         scheduleSplashScreen()
     }
@@ -57,6 +50,6 @@ class SplashActivity : AppCompatActivity() {
      */
     private fun routeToAppropriatePage() {
         val intent = Intent(this, MenuActivity::class.java)
-        startActivity(intent, ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
+        startActivity(intent)
     }
 }
