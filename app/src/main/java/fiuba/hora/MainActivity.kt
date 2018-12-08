@@ -1,13 +1,12 @@
 package fiuba.hora
 
 import android.content.Context
+import android.content.Intent
 import android.graphics.*
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import android.transition.Fade
 import android.view.MotionEvent
 import android.view.View
-import android.view.Window
 import android.widget.ImageView
 import android.widget.TextView
 
@@ -40,10 +39,6 @@ abstract class MainActivity : AppCompatActivity() {
      */
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        with(window) {
-            requestFeature(Window.FEATURE_CONTENT_TRANSITIONS)
-            enterTransition = Fade()
-        }
         setContentView(R.layout.activity_main)
     }
 
@@ -124,6 +119,7 @@ abstract class MainActivity : AppCompatActivity() {
         val mImageClock = findViewById<View>(R.id.clock) as ImageView
         val mImageMinHand = findViewById<View>(R.id.minHand) as ImageView
         val mImageHourHand = findViewById<View>(R.id.hourHand) as ImageView
+        val mImageCenterClock = findViewById<View>(R.id.centerClock) as ImageView
 
         mCanvasView.layoutParams = RelativeLayout.LayoutParams(
                 RelativeLayout.LayoutParams.WRAP_CONTENT,
@@ -133,6 +129,7 @@ abstract class MainActivity : AppCompatActivity() {
         mImageClock.bringToFront()
         mImageMinHand.bringToFront()
         mImageHourHand.bringToFront()
+        mImageCenterClock.bringToFront()
     }
 
     /**
@@ -239,6 +236,8 @@ abstract class MainActivity : AppCompatActivity() {
      */
     private fun volverButton() {
         volver1.setOnClickListener {
+            val menuIntent = Intent(this, MenuActivity::class.java)
+            startActivity(menuIntent)
             finish()
         }
     }
