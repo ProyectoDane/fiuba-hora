@@ -33,13 +33,6 @@ class IntroMinutosActivity : IntroActivity() {
     }
 
     /**
-     * Obtiene el intent con la activity del video tutorial.
-     */
-    override fun getTheTutorial(): Intent {
-        return Intent(this, VideoMinutosActivity::class.java)
-    }
-
-    /**
      * Obtiene el id del recurso string que tiene el texto para el titulo
      * de la pantalla.
      */

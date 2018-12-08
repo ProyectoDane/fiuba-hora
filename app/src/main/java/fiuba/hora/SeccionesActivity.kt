@@ -21,7 +21,6 @@ open class SeccionesActivity : AppCompatActivity() {
         Seccion("cuartos de hora", R.drawable.minutos, R.color.blue2, ::toCuartosHoraActivity),
         Seccion("minutos", R.drawable.minutos, R.color.blue3, ::toMinActivity),
         Seccion("hora+minutos", R.drawable.segundos, R.color.blue4, ::toHoraMinutosActivity)
-        //Seccion("dia/noche", R.drawable.ic_launcher_background, R.color.blue3, ::toMomentosActivity)
     )
 
     /**
@@ -71,14 +70,6 @@ open class SeccionesActivity : AppCompatActivity() {
      */
     open fun toHoraMinutosActivity() {
         toActivity(Intent(this, IntroHoraMinutosActivity::class.java))
-    }
-
-    /**
-     * Ejecuta un salto a la activity de la introduccion al ejercicio
-     * de identificar los momentos del dia.
-     */
-    fun toMomentosActivity() {
-        toActivity(Intent(this, IntroMomentosDia1Activity::class.java))
     }
 
     /**
