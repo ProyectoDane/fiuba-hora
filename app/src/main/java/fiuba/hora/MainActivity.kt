@@ -119,6 +119,7 @@ abstract class MainActivity : AppCompatActivity() {
         val mImageClock = findViewById<View>(R.id.clock) as ImageView
         val mImageMinHand = findViewById<View>(R.id.minHand) as ImageView
         val mImageHourHand = findViewById<View>(R.id.hourHand) as ImageView
+        val mImageCenterClock = findViewById<View>(R.id.centerClock) as ImageView
 
         mCanvasView.layoutParams = RelativeLayout.LayoutParams(
                 RelativeLayout.LayoutParams.WRAP_CONTENT,
@@ -128,6 +129,7 @@ abstract class MainActivity : AppCompatActivity() {
         mImageClock.bringToFront()
         mImageMinHand.bringToFront()
         mImageHourHand.bringToFront()
+        mImageCenterClock.bringToFront()
     }
 
     /**
