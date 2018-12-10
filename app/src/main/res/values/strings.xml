@@ -68,6 +68,9 @@
 
     <string name="intro_hr_min_title">Las horas y los minutos</string>
     <string name="intro_hr_min_txt">Usamos ambas agujas del reloj para representar la hora</string>
+    <string name="intro_hr_min2_txt">Cuando apunta al 11, se dice la siguiente hora menos cinco.
+        En este reloj es la una menos cinco. \nAhora es tu turno. Mové las agujas hasta
+        que señalen la hora a encontrar.</string>
 
     <string name="ident_hora_inic_dig">12:00</string>
     <string name="ident_hora_inic_txt">DOCE EN PUNTO</string>

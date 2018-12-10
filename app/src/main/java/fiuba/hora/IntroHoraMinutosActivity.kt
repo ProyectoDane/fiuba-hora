@@ -23,7 +23,7 @@ class IntroHoraMinutosActivity : IntroActivity() {
             IntroData(R.string.intro_mins8_txt, R.mipmap.clock_minutes11, R.raw.minutes10),
             IntroData(R.string.intro_mins9_txt, R.mipmap.clock_minutes12, R.raw.minutes11),
             IntroData(R.string.intro_mins10_txt, R.mipmap.clock_minutes13, R.raw.minutes12),
-            IntroData(R.string.intro_mins11_txt, R.mipmap.clock_minutes14, R.raw.minutes13)
+            IntroData(R.string.intro_hr_min2_txt, R.mipmap.clock_minutes14, R.raw.hr_mins1)
     )
 
     /**
