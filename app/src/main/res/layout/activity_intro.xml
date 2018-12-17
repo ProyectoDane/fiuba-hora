@@ -18,7 +18,7 @@
         android:text="@string/intro_hora_title"
         android:textAllCaps="true"
         android:textAlignment="gravity"
-        android:textColor="@color/colorPrimaryDark"
+        android:textColor="@color/primaryText"
         android:textSize="40sp"
         android:textStyle="bold"
         android:layout_weight="0.1"/>
@@ -42,17 +42,19 @@
             android:layout_height="320dp"
             android:scaleType="fitXY"
             android:id="@+id/intro_image"
-            android:src="@mipmap/clock_intro"/>
+            android:src="@mipmap/clock_intro"
+            android:layout_gravity="center"
+            android:gravity="center|start"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="350dp"
             android:id="@+id/intro_txt"
-            android:layout_gravity="bottom"
+            android:layout_gravity="center"
             android:gravity="center|start"
             android:text="@string/intro_hora_txt"
             android:textAllCaps="true"
-            android:textColor="@color/colorPrimaryDark"
+            android:textColor="@color/primaryText"
             android:textSize="30sp"
             android:paddingTop="10dp"
             android:paddingLeft="50dp"

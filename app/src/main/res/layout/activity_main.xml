@@ -48,7 +48,7 @@
                 android:layout_centerHorizontal="true"
                 android:background="@android:color/transparent"
                 android:orientation="vertical"
-                android:src="@mipmap/clock" />
+                android:src="@mipmap/reloj_02" />
 
             <ImageView
                 android:id="@+id/minHand"

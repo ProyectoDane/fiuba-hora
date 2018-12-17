@@ -16,11 +16,11 @@ open class SeccionesActivity : AppCompatActivity() {
     private lateinit var viewAdapter: RecyclerView.Adapter<*>
     private lateinit var viewManager: RecyclerView.LayoutManager
     private val seccionesArray: Array<Seccion> = arrayOf(
-        Seccion("hora", R.drawable.horas, R.color.textIcons, ::toHoraActivity),
-        Seccion("medias horas", R.drawable.minutos, R.color.blue1, ::toMediasHorasActivity),
-        Seccion("cuartos de hora", R.drawable.minutos, R.color.blue2, ::toCuartosHoraActivity),
-        Seccion("minutos", R.drawable.minutos, R.color.blue3, ::toMinActivity),
-        Seccion("hora+minutos", R.drawable.segundos, R.color.blue4, ::toHoraMinutosActivity)
+        Seccion("hora", R.drawable.icon_hs_05, R.color.textIcons, ::toHoraActivity),
+        Seccion("medias horas", R.drawable.icon_30min_04, R.color.blue1, ::toMediasHorasActivity),
+        Seccion("cuartos de hora", R.drawable.icon_15min_03, R.color.blue2, ::toCuartosHoraActivity),
+        Seccion("minutos", R.drawable.icon_min_01, R.color.blue3, ::toMinActivity),
+        Seccion("hora+minutos", R.drawable.icon_hsmin_02, R.color.blue4, ::toHoraMinutosActivity)
     )
 
     /**
